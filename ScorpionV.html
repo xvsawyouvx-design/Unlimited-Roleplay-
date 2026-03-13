@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GER] ScorpionV | 🔞16+ | FiveM Roleplay Server</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b35 0%, #e63946 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.8);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 107, 53, 0.8), 0 0 30px rgba(255, 107, 53, 0.6);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 107, 53, 1), 0 0 40px rgba(255, 107, 53, 0.8);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .age-badge {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #ff6b35;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(230, 57, 70, 0.1) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            border-color: rgba(255, 107, 53, 0.6);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff6b35;
+        }
+
+        .feature-description {
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(230, 57, 70, 0.15) 100%);
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(230, 57, 70, 0.2) 100%);
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35 0%, #e63946 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+        }
+
+        .info-box {
+            background: rgba(26, 26, 46, 0.8);
+            border-left: 4px solid #ff6b35;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .server-info-box {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .server-info-box p {
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 10px;
+        }
+
+        .server-info-box strong {
+            color: #ff6b35;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .footer-text {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1 class="logo">Unlimited Roleplay</h1>
+            <p class="subtitle">[GER] Premium FiveM Roleplay Server</p>
+            <div class="age-badge">🔞 Ab 16 Jahren</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Willkommen auf Unlimited Roleplay</h2>
+            <p style="text-align: center; font-size: 1.2rem; line-height: 1.8; opacity: 0.9;">
+                Erlebe ein einzigartiges Roleplay-Erlebnis auf unserem deutschen Unlimited Roleplay. 
+                Mit modernster Technologie, einer engagierten Community und zahllosen Möglichkeiten 
+                wartet das Abenteuer deines Lebens auf dich!
+                Und Suchen derzeit noch neue teammitglieder Also komm gerne in unser Team
+            </p>
+        </div>
+
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">One-Sync</div>
+                    <div class="stat-label">Mehr Spieler gleichzeitig</div>
+                </div>
+                <div>
+                    <div class="stat-number">16+</div>
+                    <div class="stat-label">Altersfreigabe</div>
+                </div>
+                <div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Online</div>
+                </div>
+                <div>
+                    <div class="stat-number">High</div>
+                    <div class="stat-label">Performance</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Server Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">Soft-Whitelist</h3>
+                    <p class="feature-description">
+                        Schneller Einstieg durch unser Soft-Whitelist System. 
+                        Keine langen Wartezeiten - starte direkt mit deinem Roleplay!
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Ingame Voice</h3>
+                    <p class="feature-description">
+                        Kristallklare Voice-Kommunikation direkt im Spiel. 
+                        Realistische Gespräche mit räumlichem Audio für maximale Immersion.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3 class="feature-title">Addon Fahrzeuge</h3>
+                    <p class="feature-description">
+                        Riesige Auswahl an hochwertigen Addon-Fahrzeugen. 
+                        Von Supersportwagen bis zu Arbeitsfahrzeugen - für jeden das Richtige!
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🕵️</div>
+                    <h3 class="feature-title">LSPD</h3>
+                    <p class="feature-description">
+                        Werde Teil der Los Santos Police Department. 
+                        Sorge für Recht und Ordnung mit realistischen Polizei-Mechaniken.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3 class="feature-title">Performance</h3>
+                    <p class="feature-description">
+                        Optimierte Server-Performance für flüssiges Gameplay. 
+                        Hochwertige Hardware und regelmäßige Updates garantiert.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">One-Sync</h3>
+                    <p class="feature-description">
+                        Erlebe die Stadt mit noch mehr Spielern gleichzeitig. 
+                        One-Sync ermöglicht eine lebendige, bevölkerte Spielwelt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Warum Unlimited Roleplay?</h2>
+            
+            <div class="info-box">
+                <h3>🎭 Authentisches Roleplay</h3>
+                <p>
+                    Tauche ein in eine Welt voller Möglichkeiten. Ob Polizist, Gangster, 
+                    Geschäftsmann oder Zivilist - bei uns kannst du deine eigene Geschichte schreiben.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>👥 Aktive Community</h3>
+                <p>
+                    Werde Teil einer freundlichen und hilfsbereiten Community. 
+                    Unser erfahrenes Team steht dir jederzeit zur Seite.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>🔧 Regelmäßige Updates</h3>
+                <p>
+                    Wir entwickeln unseren Server ständig weiter. Neue Features, 
+                    Jobs und Inhalte sorgen für langanhaltenden Spielspaß.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>⚖️ Faire Regeln</h3>
+                <p>
+                    Klare und faire Serverregeln sorgen für ein angenehmes Spielerlebnis für alle. 
+                    Unser Moderationsteam achtet auf Einhaltung und fairen Umgang.
+                </p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Bereit für dein Abenteuer?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">
+                Schließe dich noch heute der Unlimited Roleplay Community an!
+            </p>
+            <strong>Jetzt Server beitreten<strong> cfx.re/join/7g5p8b
+            <p style="margin-top: 30px; opacity: 0.7;">
+                Mindestalter: 16 Jahre | Soft-Whitelist | Deutsche Spieler
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Server Informationen</h2>
+            <div class="server-info-box">
+                <p>
+                    <strong>Server Name:</strong> [GER] Unlimited Roleplay | 🔞16+ | 📝Soft-Whitelist | One-Sync | 📱IngameVoice | 🚗Addon Fahrzeuge | 🕵️ LSPD | 🔥Performance
+                </p>
+                <p>
+                    <strong>Sprache:</strong> Deutsch (GER)
+                </p>
+                <p>
+                    <strong>Mindestalter:</strong> 16 Jahre
+                </p>
+                <p>
+                    <strong>Whitelist:</strong> Soft-Whitelist (Schneller Zugang)
+                </p>
+                <p>
+                    <strong>Connect IP:</strong> connect 134.255.233.15:30322
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-text">© 2026 Unlimited Roleplay - Premium FiveM Roleplay Server</p>
+        <p class="footer-text" style="margin-top: 10px;">Alle Rechte vorbehalten</p>
+    </footer>
+</body>
+</html>
